@@ -10,8 +10,8 @@ import argparse
 import pickle
 import cv2
 from twilio.rest import Client
-account_sid = 'ACc67e61cfa926a5d7c7058e600a2139b1' 
-auth_token = 'd5682396673e91ea6604297e876866ef' 
+account_sid = '' 
+auth_token = '' 
 client = Client(account_sid, auth_token)
 camid = 'IRNSS-1I'
 location = 'Geosynchronous / 55°E, 29° inclined orbit'
@@ -121,10 +121,10 @@ while True:
 			client.messages.create(to="+917223830066", #for example +918255555555
                     from_="+13608451180", #sender number can be coped from twilo
                     body='\n'+ str(text) +'\n Satellite: ' + str(camid) + '\n Orbit: ' + location)
-			# message = client.messages.create(  
-			# 	messaging_service_sid='MG4e19685efe33626a2ce69dfe250d9ff1', 
-			# 	body='\n'+ str(text) +'\n Satellite: ' + str(camid) + '\n Orbit: ' + location,      
-			# 	to='+917223830066' 
+			# message = client.messages.create(
+			# 	messaging_service_sid='', 
+			# 	body='\n'+ str(text) +'\n : ' + str(camid) + '\n Orbit: ' + location,      
+			# 	to='+' 
 			# ) 
 			
 			# print(message.sid)
